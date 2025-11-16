@@ -15,7 +15,7 @@ import { edit } from '@/routes/user-password';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Password settings',
+        title: 'إعدادات كلمة المرور',
         href: edit().url,
     },
 ];
@@ -26,13 +26,13 @@ export default function Password() {
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Password settings" />
+            <Head title="إعدادات كلمة المرور" />
 
             <SettingsLayout>
                 <div className="space-y-6">
                     <HeadingSmall
-                        title="Update password"
-                        description="Ensure your account is using a long, random password to stay secure"
+                        title="تحديث كلمة المرور"
+                        description="استخدم كلمة مرور قوية وعشوائية لحماية حسابك"
                     />
 
                     <Form
@@ -61,7 +61,7 @@ export default function Password() {
                             <>
                                 <div className="grid gap-2">
                                     <Label htmlFor="current_password">
-                                        Current password
+                                        كلمة المرور الحالية
                                     </Label>
 
                                     <Input
@@ -71,7 +71,7 @@ export default function Password() {
                                         type="password"
                                         className="mt-1 block w-full"
                                         autoComplete="current-password"
-                                        placeholder="Current password"
+                                        placeholder="••••••••"
                                     />
 
                                     <InputError
@@ -81,7 +81,7 @@ export default function Password() {
 
                                 <div className="grid gap-2">
                                     <Label htmlFor="password">
-                                        New password
+                                        كلمة المرور الجديدة
                                     </Label>
 
                                     <Input
@@ -91,7 +91,7 @@ export default function Password() {
                                         type="password"
                                         className="mt-1 block w-full"
                                         autoComplete="new-password"
-                                        placeholder="New password"
+                                        placeholder="••••••••"
                                     />
 
                                     <InputError message={errors.password} />
@@ -99,7 +99,7 @@ export default function Password() {
 
                                 <div className="grid gap-2">
                                     <Label htmlFor="password_confirmation">
-                                        Confirm password
+                                        تأكيد كلمة المرور
                                     </Label>
 
                                     <Input
@@ -108,7 +108,7 @@ export default function Password() {
                                         type="password"
                                         className="mt-1 block w-full"
                                         autoComplete="new-password"
-                                        placeholder="Confirm password"
+                                        placeholder="أعد كتابة كلمة المرور"
                                     />
 
                                     <InputError
@@ -121,7 +121,7 @@ export default function Password() {
                                         disabled={processing}
                                         data-test="update-password-button"
                                     >
-                                        Save password
+                                        حفظ كلمة المرور
                                     </Button>
 
                                     <Transition
@@ -131,9 +131,7 @@ export default function Password() {
                                         leave="transition ease-in-out"
                                         leaveTo="opacity-0"
                                     >
-                                        <p className="text-sm text-neutral-600">
-                                            Saved
-                                        </p>
+                                        <p className="text-sm text-neutral-600">تم الحفظ</p>
                                     </Transition>
                                 </div>
                             </>

@@ -18,7 +18,7 @@ import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
+        title: 'لوحة التحكم',
         href: dashboard(),
         icon: LayoutGrid,
     },
@@ -26,12 +26,12 @@ const mainNavItems: NavItem[] = [
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
+        title: 'مستودع المنصة',
         href: 'https://github.com/laravel/react-starter-kit',
         icon: Folder,
     },
     {
-        title: 'Documentation',
+        title: 'دليل الاستخدام',
         href: 'https://laravel.com/docs/starter-kits#react',
         icon: BookOpen,
     },
