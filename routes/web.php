@@ -15,6 +15,10 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+Route::get('/about', fn () => Inertia::render('about'))->name('about');
+Route::get('/how-it-works', fn () => Inertia::render('how_it_works'))->name('howItWorks');
+Route::get('/privacy', fn () => Inertia::render('privacy'))->name('privacy');
+
 Route::get('b/{slug}', [BusinessPageController::class, 'show'])->name('public.businesses.show');
 Route::post('b/{business}/click', [BusinessPageController::class, 'trackClick'])->name('public.businesses.click');
 

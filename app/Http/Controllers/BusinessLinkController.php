@@ -42,7 +42,7 @@ class BusinessLinkController extends Controller
         $link = $business->links()->create($this->validatedData($request));
         $this->payloadService->refresh($business);
 
-        return to_route('businesses.links.edit', ['link' => $link])->with('status', 'link-created');
+        return to_route('links.edit', ['link' => $link])->with('status', 'link-created');
     }
 
     public function edit(BusinessLink $link, Request $request): Response

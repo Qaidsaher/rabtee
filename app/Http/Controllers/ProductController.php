@@ -42,7 +42,7 @@ class ProductController extends Controller
         $product = $business->products()->create($this->validatedData($request));
         $this->payloadService->refresh($business);
 
-        return to_route('businesses.products.edit', ['product' => $product])->with('status', 'product-created');
+        return to_route('products.edit', ['product' => $product])->with('status', 'product-created');
     }
 
     public function edit(Product $product, Request $request): Response

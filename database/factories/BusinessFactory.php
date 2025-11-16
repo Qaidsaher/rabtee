@@ -15,7 +15,7 @@ class BusinessFactory extends Factory
 
     public function definition(): array
     {
-        $company = fake('ar_SA')->unique()->company();
+        $company = fake('ar_SA')->company();
         $slugBase = Str::slug($company);
 
         if ($slugBase === '') {

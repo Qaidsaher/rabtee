@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REMOTE_URL="https://github.com/Qaidsaher/rabti.git"
+REMOTE_URL="https://github.com/Qaidsaher/rabtee.git"
 BRANCH_NAME="work"
 
 function log() {
