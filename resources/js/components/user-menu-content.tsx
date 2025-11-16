@@ -41,8 +41,8 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
                         prefetch
                         onClick={cleanup}
                     >
-                        <Settings className="mr-2" />
-                        Settings
+                        <Settings className="ms-2 rotate-180" />
+                        الإعدادات
                     </Link>
                 </DropdownMenuItem>
             </DropdownMenuGroup>
@@ -55,8 +55,8 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
                     onClick={handleLogout}
                     data-test="logout-button"
                 >
-                    <LogOut className="mr-2" />
-                    Log out
+                    <LogOut className="ms-2 rotate-180" />
+                    تسجيل الخروج
                 </Link>
             </DropdownMenuItem>
         </>
